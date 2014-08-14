@@ -1,0 +1,16 @@
+name = RL Realty
+description = RL Realty Custom
+core = 7.x
+
+;scripts[] = js/filename.js
+
+stylesheets[all][] = stylesheets/screen.css
+
+regions[navigation] = Navigation
+regions[header] = Header
+regions[help] = Help
+regions[content] = Content
+regions[sidebar] = Sidebar
+regions[widgets] = Widgets
+regions[footer] = Footer
+
