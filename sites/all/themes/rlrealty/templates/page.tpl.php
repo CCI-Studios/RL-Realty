@@ -76,20 +76,20 @@
   <div id="page-wrapper"><div><div>
 
     <div id="navigation"><div><div>
+        <a href="<?php print $front_page; ?>" title="<?php print t('Home'); ?>" rel="home" id="logo">
+          <img src="<?php print $logo; ?>" alt="<?php print t('Home'); ?>" />
+        </a>
+
       <?php print render($page['navigation']); ?>
     </div></div></div>
 
     <div id="header"><div><div>
-
-      <?php if ($logo): ?>
-        <a href="<?php print $front_page; ?>" title="<?php print t('Home'); ?>" rel="home" id="logo">
-          <img src="<?php print $logo; ?>" alt="<?php print t('Home'); ?>" />
-        </a>
-      <?php endif; ?>
-
       <?php print render($page['header']); ?>
-
     </div></div></div> <!-- /#header -->
+
+    <div id="welcome"><div><div>
+      <?php print render($page['welcome']); ?>
+    </div></div></div>
 
     <div id="main-wrapper"><div><div>
 
@@ -101,25 +101,13 @@
         <?php print $messages; ?>
         <?php if ($tabs): ?><div class="tabs"><?php print render($tabs); ?></div><?php endif; ?>
         <?php print render($page['help']); ?>
-        <?php if ($action_links): ?><ul class="action-links"><?php print render($action_links); ?></ul><?php endif; ?>
         <?php print render($page['content']); ?>
       </div></div></div> <!-- /#content -->
 
-      <?php if ($page['sidebar']): ?>
-        <div id="sidebar"><div><div>
-          <?php print render($page['sidebar']); ?>
-        </div></div></div> <!-- /#sidebar -->
-      <?php endif; ?>
-
     </div></div></div> <!-- /#main, /#main-wrapper -->
-
-    <div id="widgets"><div><div>
-      <?php print render($page['widgets']); ?>
-    </div></div></div>
 
     <div id="footer"><div><div>
       <?php print render($page['footer']); ?>
-      <div id="copyright">&copy; EXAMPLE <?php print date('Y'); ?></div>
       <div id="site-by-cci">Site by <a href="http://ccistudios.com" target="_blank">CCI Studios</a></div>
     </div></div></div> <!-- /#footer -->
 
