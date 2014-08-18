@@ -1,6 +1,13 @@
 body
 {
-    font-family:sans-serif;
-    font-weight:bold;
+    font-family:"pragmatica-web", sans-serif;
     font-size:14px;
+    -webkit-font-smoothing:antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.font-condensed
+{
+    font-family:"pragmatica-web-condensed", sans-serif;
+    font-weight: bold;
 }

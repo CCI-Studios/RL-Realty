@@ -26,6 +26,7 @@
 
     #block-system-main-menu .content
     {
+        @extend .font-condensed;
         text-transform: uppercase;
 
         & > ul
@@ -48,6 +49,8 @@
                     display: block;
                     padding: 17px 13px;
                     border-right:1px dotted $gold;
+                    line-height: 100%;
+                    font-size:16px;
 
                     &:hover
                     {
