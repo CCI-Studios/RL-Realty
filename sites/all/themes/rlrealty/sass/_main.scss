@@ -1,7 +1,20 @@
 #navigation,
+#header,
+#welcome,
+#content,
 #footer
 {
+    & > div
+    {
+        width: 100%;
+        max-width: 1000px;
+        margin: 0 auto;
 
+        & > div
+        {
+            padding: 0 20px;
+        }
+    }
 }
 
 #navigation
