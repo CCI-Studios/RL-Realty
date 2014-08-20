@@ -1,0 +1,17 @@
+name = RL Realty Header Slideshow
+core = 7.x
+package = RL Realty
+dependencies[] = features
+dependencies[] = image
+dependencies[] = text
+dependencies[] = views
+features[ctools][] = views:views_default:3.0
+features[features_api][] = api:2
+features[field_base][] = body
+features[field_base][] = field_header_image
+features[field_instance][] = node-header_slide-body
+features[field_instance][] = node-header_slide-field_header_image
+features[image][] = header_image
+features[node][] = header_slide
+features[views_view][] = header_slideshow
+features_exclude[dependencies][ctools] = ctools
