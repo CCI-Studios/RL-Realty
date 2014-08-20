@@ -106,10 +106,13 @@
 
     </div></div></div> <!-- /#main, /#main-wrapper -->
 
-    <div id="footer"><div><div>
+    <div id="footer"><div><div><div>
       <?php print render($page['footer']); ?>
+
+      <div id="footer-search"><?php $form = drupal_get_form('search_block_form'); print drupal_render($form); ?></div>
+
       <div id="site-by-cci">Site by <a href="http://ccistudios.com" target="_blank">CCI Studios</a></div>
-    </div></div></div> <!-- /#footer -->
+  </div></div></div></div> <!-- /#footer -->
 
 
   </div></div></div> <!-- /#page-wrapper -->
