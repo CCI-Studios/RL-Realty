@@ -98,3 +98,81 @@
         }
     }
 }
+
+.view-properties
+{
+    position: absolute;
+    top:0;
+    right: 0;
+    width: 663px;
+    height: 100%;
+    overflow: hidden;
+
+    .view-content
+    {
+        height: 100%;
+    }
+
+    .views-row
+    {
+        float: left;
+        width: 220px;
+        height: 100%;
+        border-left:1px solid $gold;
+        position: relative;
+
+        &.views-row-odd
+        {
+            background:$blue;
+        }
+
+        &:hover .views-field-field-short-title h2 a
+        {
+            background:url(../img/icon-white-small-irish-fighter.png) no-repeat 110px 10px;
+        }
+
+        .views-field-field-short-title h2
+        {
+            font-size:2.7em;
+            text-shadow:-2px 2px 2px rgba(0,0,0, 0.3);
+            text-transform: uppercase;
+            line-height: 100%;
+            height: 90px;
+
+            a
+            {
+                color:white;
+                display: block;
+                padding: 25px 20px 0 20px;
+
+                &:hover
+                {
+                    text-decoration: none;
+                    color:$gold;
+                }
+
+                div
+                {
+                    width: 1px;
+                }
+            }
+        }
+
+        .views-field-field-description
+        {
+            padding:0 20px;
+        }
+
+        .views-field-field-property-image
+        {
+            position: absolute;
+            left: 0;
+            bottom: 0;
+
+            img
+            {
+                display: block;
+            }
+        }
+    }
+}

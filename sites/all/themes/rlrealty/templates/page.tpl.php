@@ -87,9 +87,11 @@
       <?php print render($page['header']); ?>
     </div></div></div> <!-- /#header -->
 
-    <div id="welcome"><div><div>
-      <?php print render($page['welcome']); ?>
-    </div></div></div>
+    <?php if ($page['welcome']): ?>
+        <div id="welcome"><div><div>
+          <?php print render($page['welcome']); ?>
+        </div></div></div>
+    <?php endif; ?>
 
     <div id="main-wrapper"><div><div>
 
@@ -103,6 +105,8 @@
         <?php print render($page['help']); ?>
         <?php print render($page['content']); ?>
       </div></div></div> <!-- /#content -->
+
+      <div class="clearfix"></div>
 
     </div></div></div> <!-- /#main, /#main-wrapper -->
 
