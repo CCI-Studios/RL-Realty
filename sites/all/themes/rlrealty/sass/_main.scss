@@ -32,6 +32,11 @@ ul, ol
     }
 }
 
+#page-wrapper
+{
+    overflow: hidden;
+}
+
 #navigation
 {
     background-color:$navy;

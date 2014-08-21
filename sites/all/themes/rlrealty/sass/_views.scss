@@ -1,0 +1,69 @@
+.view-header-slideshow
+{
+    height: 430px;
+    position: relative;
+
+    .view-content
+    {
+        width: 100%;
+        height: 100%;
+    }
+
+    .views-row
+    {
+        display: none;
+        color:white;
+        text-shadow:-2px 2px 2px rgba(0,0,0, 0.5);
+        position: absolute;
+        height: 100%;
+        width: 100%;
+        top:0;
+        left: 0;
+
+        &.views-row-first
+        {
+            display: block;
+        }
+
+        .views-field-nothing
+        {
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            z-index: 10;
+            background:$navy;
+            background:rgba(4,28,66, 0.8);
+            padding: 6px 15px;
+            width: 450px;
+        }
+
+        .views-field-title h2
+        {
+            @extend .font-condensed;
+
+            text-transform: uppercase;
+            font-size: 2.5em;
+        }
+        .views-field-body
+        {
+            display: none;
+        }
+
+        .views-field-field-header-image
+        {
+            position: absolute;
+            top: 0;
+            left: 50%;
+            width: 100%;
+            height: 100%;
+            margin-left: -610px;
+
+            img
+            {
+                display: block;
+                height: 100%!important;
+                width: auto!important;
+            }
+        }
+    }
+}

@@ -2,7 +2,7 @@ name = RL Realty
 description = RL Realty Custom
 core = 7.x
 
-;scripts[] = js/filename.js
+scripts[] = js/slideshow.js
 
 stylesheets[all][] = css/screen.css
 
