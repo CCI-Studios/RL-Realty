@@ -57,15 +57,17 @@ function rl_realty_properties_views_default_views() {
   $handler->display->display_options['fields']['field_short_title']['alter']['text'] = '<a href="[path]"><div>[field_short_title]</div></a>';
   $handler->display->display_options['fields']['field_short_title']['element_type'] = 'h2';
   $handler->display->display_options['fields']['field_short_title']['element_label_colon'] = FALSE;
-  /* Field: Content: Description */
-  $handler->display->display_options['fields']['field_description']['id'] = 'field_description';
-  $handler->display->display_options['fields']['field_description']['table'] = 'field_data_field_description';
-  $handler->display->display_options['fields']['field_description']['field'] = 'field_description';
-  $handler->display->display_options['fields']['field_description']['label'] = '';
-  $handler->display->display_options['fields']['field_description']['element_label_colon'] = FALSE;
-  $handler->display->display_options['fields']['field_description']['type'] = 'text_trimmed';
-  $handler->display->display_options['fields']['field_description']['settings'] = array(
-    'trim_length' => '130',
+  /* Field: Content: Short Description */
+  $handler->display->display_options['fields']['field_short_description']['id'] = 'field_short_description';
+  $handler->display->display_options['fields']['field_short_description']['table'] = 'field_data_field_short_description';
+  $handler->display->display_options['fields']['field_short_description']['field'] = 'field_short_description';
+  $handler->display->display_options['fields']['field_short_description']['label'] = '';
+  $handler->display->display_options['fields']['field_short_description']['alter']['alter_text'] = TRUE;
+  $handler->display->display_options['fields']['field_short_description']['alter']['text'] = '<a href="[path]">[field_short_description]</a>';
+  $handler->display->display_options['fields']['field_short_description']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['field_short_description']['type'] = 'text_trimmed';
+  $handler->display->display_options['fields']['field_short_description']['settings'] = array(
+    'trim_length' => '135',
   );
   /* Field: Content: Thumbnail */
   $handler->display->display_options['fields']['field_property_image']['id'] = 'field_property_image';

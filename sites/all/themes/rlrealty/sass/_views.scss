@@ -111,6 +111,9 @@
     .view-content
     {
         height: 100%;
+        width: 10000px;
+        position:relative;
+        left: 0;
     }
 
     .views-row
@@ -126,9 +129,13 @@
             background:$blue;
         }
 
-        &:hover .views-field-field-short-title h2 a
+        &:hover
         {
-            background:url(../img/icon-white-small-irish-fighter.png) no-repeat 110px 10px;
+            .views-field-field-short-title h2 a
+            {
+                background:url(../img/icon-white-small-irish-fighter.png) no-repeat 110px 8px;
+                color:$gold;
+            }
         }
 
         .views-field-field-short-title h2
@@ -143,12 +150,11 @@
             {
                 color:white;
                 display: block;
-                padding: 25px 20px 0 20px;
+                padding: 22px 20px 0 20px;
 
                 &:hover
                 {
                     text-decoration: none;
-                    color:$gold;
                 }
 
                 div
@@ -158,9 +164,20 @@
             }
         }
 
-        .views-field-field-description
+        .views-field-field-short-description
         {
-            padding:0 20px;
+            a
+            {
+                color:white;
+                height: 75px;
+                display: block;
+                padding:0 20px;
+
+                &:hover
+                {
+                    text-decoration: none;
+                }
+            }
         }
 
         .views-field-field-property-image
@@ -174,5 +191,34 @@
                 display: block;
             }
         }
+    }
+}
+.btn-properties
+{
+    display: block;
+    position: absolute;
+    top:50%;
+    margin-top:-23px;
+    height: 46px;
+    width: 22px;
+    background-repeat:no-repeat;
+    background-position:left top;
+    font-size:0;
+    color:transparent;
+
+    &:hover
+    {
+        background-position:left bottom;
+    }
+
+    &.btn-previous
+    {
+        background-image:url(../img/arrow-large-left.png);
+        left:310px;
+    }
+    &.btn-next
+    {
+        background-image:url(../img/arrow-large-right.png);
+        right:-27px;
     }
 }
