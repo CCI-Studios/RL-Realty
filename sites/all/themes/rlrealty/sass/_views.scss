@@ -222,3 +222,84 @@
         right:-27px;
     }
 }
+
+.view-property
+{
+    padding-left: 60%;
+
+    .views-field-field-images-1
+    {
+        width: 720px;
+        height: 380px;
+        position: absolute;
+        overflow: hidden;
+        left: 0;
+        top: 0;
+
+        ul
+        {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+
+            li
+            {
+                list-style: none;
+                margin: 0;
+                padding: 0;
+                position: absolute;
+                top: 0;
+                left: 0;
+                display: none;
+
+                &.first
+                {
+                    display: block;
+                }
+
+                img
+                {
+                    display: block;
+                }
+            }
+        }
+    }
+    .views-field-field-images
+    {
+        width: 720px;
+        overflow: hidden;
+        position: absolute;
+        left: 0;
+        top: 380px;
+        border-top: 1px solid $gold;
+
+        & > div
+        {
+            width: 100000px;
+            position: relative;
+        }
+
+        ul
+        {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+
+            li
+            {
+                list-style: none;
+                margin: 0;
+                padding: 0;
+                float: left;
+                border-right:1px solid $gold;
+
+                img
+                {
+                    display: block;
+                    width: 100%!important;
+                    height: auto!important;
+                }
+            }
+        }
+    }
+}

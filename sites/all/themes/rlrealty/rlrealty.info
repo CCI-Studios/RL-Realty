@@ -4,6 +4,7 @@ core = 7.x
 
 scripts[] = js/slideshow.js
 scripts[] = js/properties.js
+scripts[] = js/property.js
 
 stylesheets[all][] = css/screen.css
 
