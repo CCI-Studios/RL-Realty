@@ -303,3 +303,110 @@
         }
     }
 }
+
+#block-views-team-members-block
+{
+    border-top:2px solid $gold;
+    border-bottom:2px solid $gold;
+    background:$navy;
+    background: -moz-linear-gradient(top, #072c68 0%, #041c42 100%); /* FF3.6+ */
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#072c68), color-stop(100%,#041c42)); /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(top, #072c68 0%,#041c42 100%); /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(top, #072c68 0%,#041c42 100%); /* Opera 11.10+ */
+    background: -ms-linear-gradient(top, #072c68 0%,#041c42 100%); /* IE10+ */
+    background: linear-gradient(to bottom, #072c68 0%,#041c42 100%); /* W3C */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#072c68', endColorstr='#041c42',GradientType=0 ); /* IE6-9 */
+    
+    & > div
+    {
+        width: 100%;
+        max-width: 958px;
+        margin: 0 auto;
+        position: relative;
+    }
+}
+.view-team-members
+{
+    overflow: hidden;
+    
+    .view-content
+    {
+        position: relative;
+        overflow: hidden;
+        width: 10000px;
+    }
+    
+    .views-row
+    {
+        float: left;
+        position: relative;
+        
+        .views-field-field-image
+        {
+            img
+            {
+                display: block;
+                border-right: 2px solid $gold;
+            }
+        }
+        
+        .views-field-nothing
+        {
+            opacity:0;
+            transition:opacity 0.6s;
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            width: 100%;
+            text-shadow:-2px 2px 2px rgba(0,0,0,0.5);
+            background:rgba(4,28,66, 0.8);
+            
+            .views-field-title
+            {
+                @extend .font-condensed;
+                text-transform: uppercase;
+                font-size:2.5em;
+                padding:8px 20px 0 20px;
+            }
+            .views-field-field-description
+            {
+                padding: 0 20px 8px 20px;
+                font-size:0.9em;
+            }
+        }
+        &:hover .views-field-nothing
+        {
+            opacity:1;
+        }
+    }
+}
+.btn-team-members
+{
+    display: block;
+    position: absolute;
+    top:50%;
+    margin-top:-23px;
+    height: 46px;
+    width: 22px;
+    background-repeat:no-repeat;
+    background-position:left top;
+    font-size:0;
+    color:transparent;
+    z-index: 2;
+
+    &:hover
+    {
+        background-position:left bottom;
+    }
+
+    &.btn-previous
+    {
+        background-image:url(../img/arrow-large-left.png);
+        left:-16px;
+    }
+    &.btn-next
+    {
+        background-image:url(../img/arrow-large-right.png);
+        right:-16px;
+    }
+}

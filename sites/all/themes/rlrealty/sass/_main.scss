@@ -241,7 +241,7 @@ a
         margin-bottom:15px;
     }
 
-    .block > h2
+    .block h2
     {
         @extend .font-condensed;
         line-height:100px;
@@ -336,5 +336,89 @@ body.page-properties
         {
             padding-top:30px
         }
+    }
+}
+
+body.page-about
+{
+    #main-wrapper > div
+    {
+        max-width:none;
+        
+        & > div
+        {
+            padding: 0;
+        }
+    }
+    
+    #page-title, #block-system-main
+    {
+        display: none;
+    }
+}
+#block-block-4
+{
+    background:url(../img/bg-history.jpg) no-repeat center center;
+    background-size:cover;
+    padding: 42px 0;
+    
+    & > div
+    {
+        width: 100%;
+        max-width: 740px;
+        margin: 0 auto;
+        background:rgba(7,44,104, 0.6);
+        
+        & > div
+        {
+            padding: 10px 25px 20px 25px;
+            overflow: hidden;
+            text-align: center;
+            text-shadow:-2px 2px 2px rgba(0,0,0,0.5);
+        }
+    }
+    
+    h2
+    {
+        @extend .font-condensed;
+        font-size:3.5em;
+        text-transform: uppercase;
+    }
+    
+    .content
+    {
+        font-size:1.1em;
+    }
+}
+#block-block-5
+{
+    background:url(../img/bg-culture.jpg) no-repeat center center;
+    background-size:cover;
+    text-shadow:-2px 2px 2px rgba(0,0,0,0.6);
+    
+    & > div
+    {
+        width: 100%;
+        max-width: 960px;
+        margin: 0 auto;
+        
+        & > div
+        {
+            max-width: 520px;
+            padding: 30px 20px;
+            background:rgba(7,44,104, 0.5);
+        }
+    }
+    
+    h2
+    {
+        @extend .font-condensed;
+        font-size:3.5em;
+        text-transform: uppercase;
+    }
+    
+    .content
+    {
+        font-size:1.1em;
     }
 }
