@@ -1,34 +1,56 @@
 (function($) {
+    var activeIndex = 0;
+    var thumbnailIndex = 0;
     var timer;
     var direction = "R";
     var $btnPrevious, $btnNext;
+    var paused = false;
 
     $(function(){
         setup();
         start();
-        hideArrows();
     });
 
     function setup()
     {
         createArrows();
+        createIndicators();
         rows().first().addClass("active");
+        thumbnails().first().addClass("active");
+        indicators().first().addClass("active")
+        thumbnails().click(thumbnailClick);
         layout();
+        hideArrows();
+        container1().add(container2()).on("mouseenter", pause);
+        container1().add(container2()).on("mouseleave", unpause);
         $(window).resize(layout);
     }
     function createArrows()
     {
         $btnPrevious = $("<a href='#' class='btn-previous btn-property'>Previous</a>");
         $btnPrevious.click(previousClick);
-        container2().before($btnPrevious);
+        container2().prepend($btnPrevious);
 
         $btnNext = $("<a href='#' class='btn-next btn-property'>Next</a>");
         $btnNext.click(nextClick);
-        container2().after($btnNext);
+        container2().append($btnNext);
+    }
+    function createIndicators()
+    {
+        var $ul = $("<ul id='property-indicators' />");
+        rows().each(function(i){
+            var $li = $("<li><a href='#'>"+i+"</a></li>");
+            $li.click(function(){
+                indicatorClick(i);
+                return false;
+            });
+            $ul.append($li);
+        });
+        container1().append($ul);
     }
     function start()
     {
-        timer = setInterval(timerNext, 5000);
+        timer = setInterval(timerNext, 3000);
     }
 
     function layout()
@@ -41,11 +63,24 @@
             width = 720;
             width2 = 720 - width1;
         }
+        if (width % numPerPage())
+        {
+            var rem = width%numPerPage();
+            width2 += rem;
+            width += rem;
+        }
+        width--;
         container1().add(container2()).width(width).css("left","-"+width2+"px");
+        
+        var height = width*0.527777;
+        container1().height(height);
+        container2().css("top", height+"px");
 
         thumbnails().each(function(){
-            $(this).width(Math.floor(width/numPerPage()));
+            $(this).width(Math.ceil(width/numPerPage()));
         });
+        
+        moveThumbnails();
     }
 
     function container1()
@@ -58,21 +93,36 @@
     }
     function slider()
     {
-        return container2().find(".field-content")
+        return container2().find(".item-list")
     }
     function rows()
     {
-        return container1().find("li");
+        return container1().find(".field-content li");
     }
     function thumbnails()
     {
         return container2().find("li");
+    }
+    function indicators()
+    {
+        return $("#property-indicators li");
     }
     function currentRow()
     {
         return rows().filter(".active");
     }
 
+    function indicatorClick(i)
+    {
+        stop();
+        gotoSlide(i);
+    }
+    function thumbnailClick()
+    {
+        stop();
+        var i = $(this).index();
+        gotoSlide(i);
+    }
     function previousClick()
     {
         stop();
@@ -92,6 +142,19 @@
 
     function numPerPage()
     {
+        if ($(window).width() <= 480)
+        {
+            return 3;
+        }
+        if ($(window).width() <= 768)
+        {
+            return 4;
+        }
+        if ($(window).width() <= 1024)
+        {
+            return 5;
+        }
+        
         return 6;
     }
     function rowWidth()
@@ -104,6 +167,14 @@
         return 0;
     }
     function maxIndex()
+    {
+        return rows().length - 1;
+    }
+    function minThumbnailIndex()
+    {
+        return 0;
+    }
+    function maxThumbnailIndex()
     {
         return rows().length - numPerPage();
     }
@@ -129,23 +200,55 @@
     {
         if (hasPrevious())
         {
-            slider().animate({
-                "left":"+="+rowWidth()+"px"
-            });
-            currentRow().removeClass("active").prev().addClass("active");
-            hideArrows();
+            gotoSlide(activeIndex-1);
         }
     }
     function nextSlide()
     {
         if (hasNext())
         {
-            slider().animate({
-                "left":"-="+rowWidth()+"px"
-            });
-            currentRow().removeClass("active").next().addClass("active");
-            hideArrows();
+            gotoSlide(activeIndex+1);
         }
+    }
+    
+    function gotoSlide(i)
+    {
+        if (i == activeIndex) return;
+            
+        currentRow().css("z-index",10).removeClass("active").fadeOut();
+        rows().eq(i).css("z-index",2).addClass("active").show();
+        thumbnails().removeClass().eq(i).addClass("active");
+        indicators().removeClass().eq(i).addClass("active");
+        activeIndex = i;
+        hideArrows();
+        moveThumbnails();
+    }
+    
+    function moveThumbnails()
+    {
+        updateThumbnailIndex();
+        
+        var left = thumbnailIndex * rowWidth() * -1;
+        slider().stop(true, true).animate({
+            "left":left+"px"
+        });
+    }
+    function updateThumbnailIndex()
+    {
+        if (activeIndex < thumbnailIndex)
+        {
+            thumbnailIndex = activeIndex;
+        }
+        else if (activeIndex > thumbnailIndex + numPerPage() - 2)
+        {
+            thumbnailIndex = activeIndex - numPerPage() + 1;
+        }
+        
+        if (thumbnailIndex < minThumbnailIndex())
+            thumbnailIndex = minThumbnailIndex();
+        
+        if (thumbnailIndex > maxThumbnailIndex())
+            thumbnailIndex = maxThumbnailIndex();
     }
 
     function hideArrows()
@@ -171,6 +274,8 @@
 
     function timerNext()
     {
+        if (paused) return;
+            
         if (direction == "R")
         {
             if (hasNext())
@@ -195,5 +300,14 @@
                 direction = "R";
             }
         }
+    }
+    
+    function pause()
+    {
+        paused = true;
+    }
+    function unpause()
+    {
+        paused = false;
     }
 }(jQuery));

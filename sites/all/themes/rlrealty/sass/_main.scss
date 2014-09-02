@@ -486,3 +486,11 @@ body.page-about
         text-decoration: underline;
     }
 }
+
+body.node-type-property
+{
+    #main-wrapper > div > div
+    {
+        padding: 0;
+    }    
+}

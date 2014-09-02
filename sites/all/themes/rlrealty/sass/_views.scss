@@ -226,6 +226,11 @@
 .view-property
 {
     padding-left: 60%;
+    
+    .view-content
+    {
+        padding-left: 30px;
+    }
 
     .views-field-field-images-1
     {
@@ -235,8 +240,10 @@
         overflow: hidden;
         left: 0;
         top: 0;
+        border-left: 1px solid $gold;
+        border-right: 1px solid $gold;
 
-        ul
+        .field-content ul
         {
             list-style: none;
             margin: 0;
@@ -251,6 +258,7 @@
                 top: 0;
                 left: 0;
                 display: none;
+                width: 100%;
 
                 &.first
                 {
@@ -260,6 +268,46 @@
                 img
                 {
                     display: block;
+                    width: 100%;
+                    height: auto;
+                }
+            }
+        }
+        
+        #property-indicators
+        {
+            margin: 0;
+            padding: 0;
+            position: absolute;
+            bottom: 10px;
+            right: 18px;
+            z-index: 20;
+            
+            li
+            {
+                display: block;
+                float: left;
+                margin: 0;
+                padding: 3px;
+                cursor: pointer;
+                
+                a
+                {
+                    display: block;
+                    font-size: 0;
+                    color: transparent;
+                    background:white;
+                    width: 12px;
+                    height: 12px;
+                    border-radius:6px;
+                    box-shadow:1px 1px 3px rgba(0,0,0, 0.4);
+                    transition:background 0.4s;
+                }
+                
+                &:hover a,
+                &.active a
+                {
+                    background:$gold;
                 }
             }
         }
@@ -267,16 +315,22 @@
     .views-field-field-images
     {
         width: 720px;
-        overflow: hidden;
         position: absolute;
         left: 0;
         top: 380px;
-        border-top: 1px solid $gold;
+        border: 1px solid $gold;
+        background:url(../img/bg-property-gallery-noimage.png) repeat-x left top;
+        background-size:contain;
 
         & > div
         {
-            width: 100000px;
-            position: relative;
+            overflow: hidden;
+            
+            & > div
+            {
+                width: 100000px;
+                position: relative;
+            }
         }
 
         ul
@@ -291,14 +345,65 @@
                 margin: 0;
                 padding: 0;
                 float: left;
-                border-right:1px solid $gold;
+                background:white;
+                position: relative;
+                
+                &:after
+                {
+                    content:"";
+                    display: block;
+                    position: absolute;
+                    right: 0;
+                    top: 0;
+                    width: 1px;
+                    height: 100%;
+                    background: $gold;
+                }
 
                 img
                 {
                     display: block;
                     width: 100%!important;
                     height: auto!important;
+                    opacity: 0.5;
+                    transition: opacity 0.4s;
                 }
+                
+                &.active img
+                {
+                    opacity:1;
+                }
+            }
+        }
+        
+        a.btn-property
+        {
+            display: block;
+            position: absolute;
+            top:50%;
+            margin-top: -9px;
+            width: 12px;
+            height: 18px;
+            background-repeat:no-repeat;
+            background-position:top center;
+            font-size: 0;
+            color:transparent;
+            z-index: 999;
+            
+            &:hover
+            {
+                background-position:center -18px;
+            }
+            
+            &.btn-previous
+            {
+                background-image:url(../img/arrow-small-left.png);
+                left:3px;
+            }
+            &.btn-next
+            {
+                background-image:url(../img/arrow-small-right.png);
+                right: 5px;
             }
         }
     }
