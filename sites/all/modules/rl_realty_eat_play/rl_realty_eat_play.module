@@ -1,0 +1,7 @@
+<?php
+/**
+ * @file
+ * Code for the RL Realty Eat & Play feature.
+ */
+
+include_once 'rl_realty_eat_play.features.inc';

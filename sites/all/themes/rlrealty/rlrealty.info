@@ -3,6 +3,7 @@ description = RL Realty Custom
 core = 7.x
 
 scripts[] = js/slideshow.js
+scripts[] = js/maps.js
 scripts[] = js/team-members.js
 scripts[] = js/properties.js
 scripts[] = js/property.js
@@ -14,4 +15,5 @@ regions[header] = Header
 regions[welcome] = Welcome
 regions[help] = Help
 regions[content] = Content
+regions[pre_footer] = Pre-footer
 regions[footer] = Footer

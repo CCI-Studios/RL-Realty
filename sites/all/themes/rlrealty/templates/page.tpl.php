@@ -109,6 +109,12 @@
       <div class="clearfix"></div>
 
     </div></div></div> <!-- /#main, /#main-wrapper -->
+    
+    <?php if ($page['pre_footer']): ?>
+        <div id="prefooter"><div><div>
+          <?php print render($page['pre_footer']); ?>
+        </div></div></div>
+    <?php endif; ?>
 
     <div id="footer"><div><div><div>
       <?php print render($page['footer']); ?>

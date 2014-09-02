@@ -410,3 +410,76 @@
         right:-16px;
     }
 }
+
+.view-eat-play
+{
+    .view-content
+    {
+        overflow-y: scroll;
+        padding: 0 10px;
+        height: 170px;
+        margin-top: 3px;
+        background:url(../img/bg-eat-play-row.png) no-repeat center top;
+    }
+    
+    .views-row
+    {
+        background:url(../img/bg-eat-play-row.png) no-repeat center bottom;
+        cursor: pointer;
+        
+        &:hover
+        {
+            color: $navy;
+        }
+    }
+    
+    .views-field-field-address,
+    .views-field-field-phone,
+    .views-field-field-website,
+    .views-field-field-business-type
+    {
+        display: none;
+    }
+    
+    .views-field-title
+    {
+        @extend .font-condensed;
+        font-size: 1.35em;
+        
+        .field-content div
+        {
+            background-repeat:no-repeat;
+            background-position:8px center;
+            padding: 4px 0 4px 36px;
+            
+            &.Eat
+            {
+                background-image:url(../img/icon-eat-white.png);
+                
+                &:hover
+                {
+                    background-image:url(../img/icon-eat-navy.png);
+                }
+            }
+            &.Play
+            {
+                background-image:url(../img/icon-play-white.png);
+                
+                &:hover
+                {
+                    background-image:url(../img/icon-play-navy.png);
+                }
+            }
+            &.Movies
+            {
+                background-image:url(../img/icon-movies-white.png);
+                
+                &:hover
+                {
+                    background-image:url(../img/icon-movies-navy.png);
+                }
+            }
+        }
+    }
+    
+}
