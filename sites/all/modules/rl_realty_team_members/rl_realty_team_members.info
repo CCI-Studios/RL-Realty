@@ -1,0 +1,17 @@
+name = RL Realty Team Members
+core = 7.x
+package = RL Realty
+dependencies[] = image
+dependencies[] = rl_realty_properties
+dependencies[] = text
+dependencies[] = views
+features[ctools][] = views:views_default:3.0
+features[features_api][] = api:2
+features[field_base][] = field_image
+features[field_instance][] = node-team_member-field_description
+features[field_instance][] = node-team_member-field_image
+features[image][] = team_member
+features[node][] = team_member
+features[views_view][] = team_members
+features_exclude[dependencies][ctools] = ctools
+features_exclude[dependencies][features] = features
