@@ -85,11 +85,11 @@
 
     function container1()
     {
-        return $(".view-property .views-field-field-images-1");
+        return $(".view-property .views-field-field-images-1, .view-special-rental .views-field-field-images-1");
     }
     function container2()
     {
-        return $(".view-property .views-field-field-images");
+        return $(".view-property .views-field-field-images, .view-special-rental .views-field-field-images");
     }
     function slider()
     {

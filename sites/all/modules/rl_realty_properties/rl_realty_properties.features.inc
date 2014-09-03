@@ -110,6 +110,14 @@ function rl_realty_properties_node_info() {
       'title_label' => t('Title'),
       'help' => '',
     ),
+    'special_rental' => array(
+      'name' => t('Special Rental'),
+      'base' => 'node_content',
+      'description' => '',
+      'has_title' => '1',
+      'title_label' => t('Title'),
+      'help' => '',
+    ),
   );
   drupal_alter('node_info', $items);
   return $items;
