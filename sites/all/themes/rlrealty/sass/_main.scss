@@ -321,7 +321,8 @@ a
     }
 }
 
-body.page-properties
+body.page-properties,
+body.page-special-event-rentals
 {
     #content
     {
@@ -343,7 +344,8 @@ body.page-properties
 
         h1#page-title
         {
-            padding-top:30px
+            padding-top:30px;
+            line-height: 100%;
         }
     }
 }
@@ -492,16 +494,31 @@ body.page-about
 body.node-type-property,
 body.node-type-special-rental
 {
-    #main-wrapper > div > div
+    #main-wrapper
     {
-        padding: 0;
-    }    
+        position: relative;
+        
+        &:after
+        {
+            margin-top: 0;
+            margin-left: -25px;
+            left: 60%;
+            top:125px;
+        }
+        
+        & > div > div
+        {
+            padding: 0;
+        }
+    }
 }
 
 body.node-type-event,
 body.page-events,
 body.node-type-news,
-body.page-news
+body.page-news,
+body.node-type-property,
+body.node-type-special-rental
 {
     #page-title
     {

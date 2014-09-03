@@ -31,7 +31,7 @@
 
     function container()
     {
-        return $(".view-properties");
+        return $(".view-properties, .view-special-rentals");
     }
     function slider()
     {

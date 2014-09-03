@@ -231,7 +231,54 @@
     
     .view-content
     {
+        @extend .font-condensed;
         padding-left: 30px;
+    }
+    
+    .views-field-title h1
+    {
+        text-transform: uppercase;
+        font-size: 45px;
+        text-shadow:-2px 2px 2px rgba(0,0,0, 0.3);
+        line-height:100%;
+        padding-top: 25px;
+        background:url(../img/bg-eat-play-row.png) no-repeat bottom center;
+        background-size:contain;
+    }
+    .views-field-field-description,
+    .views-field-field-amenities
+    {
+        padding-top: 10px;
+        position: absolute;
+        
+        &.active
+        {
+            position: static;
+        }
+        
+        .views-label
+        {
+            color:$gold;
+            font-size:1.25em;
+        }
+        
+        .field-content
+        {
+            font-size:0.9em;
+            
+            ul
+            {
+                list-style-image:url(../img/gold-bullet.png);
+                font-size: 1.2em;
+            }
+        }
+    }
+    .btn-switch-description
+    {
+        font-size:1.3em;
+        color:white;
+        margin: 15px 0;
+        display: block;
     }
 
     .views-field-field-images-1
