@@ -99,7 +99,8 @@
     }
 }
 
-.view-properties
+.view-properties,
+.view-special-rentals
 {
     position: absolute;
     top:0;
@@ -223,7 +224,8 @@
     }
 }
 
-.view-property
+.view-property,
+.view-special-rental
 {
     padding-left: 60%;
     
@@ -587,4 +589,65 @@
         }
     }
     
+}
+
+.view-events,
+.view-news
+{    
+    .view-content
+    {
+        @extend .font-condensed;
+        font-size:1.1111em;
+
+        .views-field-title a
+        {
+            color:white;
+        }
+    }
+}
+.view-event,
+.view-news-article
+{
+    padding-left: 275px;
+    
+    .view-content
+    {
+        @extend .font-condensed;
+        border-left: 1px solid $gold;
+        padding-left: 25px;
+        padding-top: 10px;
+        padding-bottom: 20px;
+        overflow: hidden;
+        position: relative;
+        left: -1px;
+        
+        .views-field-field-event-date,
+        .views-field-created
+        {
+            font-weight: 400;
+            text-transform: uppercase;
+            width: 70px;
+            text-align: center;
+        }
+        .views-field-field-event-date-1,
+        .views-field-created-1
+        {
+            font-size: 45px;
+            text-shadow:-2px 2px 2px rgba(0,0,0, 0.3);
+            line-height:100%;
+            width: 70px;
+            text-align: center;
+        }
+        .views-field-title
+        {
+            color:$gold;
+            text-shadow:-2px 2px 2px rgba(0,0,0, 0.3);
+            font-size:1.75em;
+            text-transform: uppercase;
+        }
+        .views-field-body
+        {
+            font-size: 0.9em;
+        }
+    }
 }
