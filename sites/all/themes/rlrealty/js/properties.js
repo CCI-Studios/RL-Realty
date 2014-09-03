@@ -2,6 +2,7 @@
     var timer;
     var direction = "R";
     var $btnPrevious, $btnNext;
+    var paused = false;
 
     $(function(){
         setup();
@@ -12,6 +13,7 @@
     function setup()
     {
         createArrows();
+        container().on("mouseenter", pause).on("mouseleave", unpause);
         rows().first().addClass("active");
     }
     function createArrows()
@@ -62,6 +64,14 @@
     {
         clearInterval(timer);
     }
+    function pause()
+    {
+        paused = true;
+    }
+    function unpause()
+    {
+        paused = false;
+    }
 
     function numPerPage()
     {
@@ -111,7 +121,7 @@
     }
     function nextSlide()
     {
-        if (hasNext())
+        if (!paused && hasNext())
         {
             slider().animate({
                 "left":"-="+rowWidth()+"px"
