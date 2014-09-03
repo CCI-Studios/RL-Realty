@@ -8,6 +8,7 @@ scripts[] = js/team-members.js
 scripts[] = js/properties.js
 scripts[] = js/property.js
 scripts[] = js/property-description.js
+scripts[] = js/contact-map.js
 
 stylesheets[all][] = css/screen.css
 

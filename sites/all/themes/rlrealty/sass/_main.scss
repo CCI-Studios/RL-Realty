@@ -554,3 +554,72 @@ body.node-type-special-rental
         }
     }
 }
+
+body.page-contact
+{
+    #content
+    {
+        @extend .font-condensed;
+        margin-left: 50%;
+        padding-left: 30px;
+        padding-top: 10px;
+        height: 370px;
+        
+        a.facebook
+        {
+            display: block;
+            font-size: 0;
+            color:transparent;
+            width: 24px;
+            height: 24px;
+            background:url(../img/fb.png) no-repeat top;
+            
+            &:hover
+            {
+                background-position:bottom;
+            }
+        }
+    }
+    
+    #page-title
+    {
+        background:url(../img/bg-eat-play-row.png) no-repeat center 52px;
+        background-size:100% 1px;
+    }
+    
+    #main-wrapper
+    {
+        position: relative;
+        
+        &:after
+        {
+            margin-top: 0;
+            margin-left:0;
+            left: 50%;
+            bottom:0;
+        }
+        
+        #block-system-main
+        {
+            font-size: 1.2em;
+            
+            strong
+            {
+                color:$gold;
+            }
+            
+            a
+            {
+                color:white;
+            }
+        }
+    }
+}
+#gmap-contact
+{
+    height: 380px;
+    position: absolute;
+    left: 0;
+    width: 50%;
+    top: 0;
+}
