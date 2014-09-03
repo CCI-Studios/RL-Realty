@@ -1,5 +1,6 @@
 (function($) {
     var timer;
+    var paused = false;
 
     $(function(){
         setup();
@@ -8,6 +9,7 @@
     function setup()
     {
         container().find(".views-field-nothing").on("mouseenter mouseleave", toggleSlideBody);
+        container().on("mouseenter", pause).on("mouseleave", unpause);
         rows().first().addClass("active").show();
 
         createIndicators();
@@ -73,7 +75,10 @@
 
     function nextSlide()
     {
-        gotoSlide(nextIndex());
+        if (!paused)
+        {
+            gotoSlide(nextIndex());
+        }
     }
     function nextIndex()
     {
@@ -97,5 +102,13 @@
     function stop()
     {
         clearInterval(timer);
+    }
+    function pause()
+    {
+        paused = true;
+    }
+    function unpause()
+    {
+        paused = false;
     }
 }(jQuery));
