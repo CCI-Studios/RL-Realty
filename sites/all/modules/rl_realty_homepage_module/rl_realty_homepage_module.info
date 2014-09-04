@@ -1,0 +1,13 @@
+name = RL Realty Homepage Module
+core = 7.x
+package = RL Realty
+dependencies[] = image
+dependencies[] = views
+features[ctools][] = views:views_default:3.0
+features[features_api][] = api:2
+features[image][] = home_module_thumbnail
+features[views_view][] = home_eat_play
+features[views_view][] = home_events
+features[views_view][] = home_news
+features[views_view][] = home_properties
+features_exclude[dependencies][ctools] = ctools
