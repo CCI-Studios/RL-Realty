@@ -70,6 +70,10 @@
             width += rem;
         }
         width--;
+        if (isTablet())
+        {
+            width = $(window).width();
+        }
         container1().add(container2()).width(width).css("left","-"+width2+"px");
         
         var height = width*0.527777;
@@ -81,6 +85,10 @@
         });
         
         moveThumbnails();
+    }
+    function isTablet()
+    {
+        return $(window).width() <= 800;
     }
 
     function container1()

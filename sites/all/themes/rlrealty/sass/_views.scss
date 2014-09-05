@@ -715,6 +715,7 @@
         margin-left: -1px;
         border-left: 1px solid $gold;
         position: relative;
+        overflow: hidden;
         
         & > div
         {
@@ -778,6 +779,8 @@
         text-shadow:-2px 2px 2px rgba(0,0,0, 0.3);
         text-transform: uppercase;
         font-size: 1.6em;
+        line-height: 100%;
+        padding-bottom: 4px;
     }
     .views-field-body
     {
@@ -808,6 +811,15 @@
         width: 1px;
         margin: 10px 0 20px 0;
         line-height: 100%;
+    }
+    .views-field-field-property-image
+    {
+        img
+        {
+            display: block;
+            width: 100%;
+            height: auto;
+        }
     }
     .views-row:hover
     {

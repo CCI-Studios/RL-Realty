@@ -1,0 +1,522 @@
+@media screen and (max-width:1060px)
+{
+    .view-properties,
+    .view-special-rentals
+    {
+        position: static;
+        width: auto;
+        height: auto;
+        padding-bottom: 20px;
+        
+        .view-content
+        {
+            width: auto;
+            position: static;
+        }
+        
+        .views-row
+        {
+            width: 50%;
+            border-left: 0;
+            padding: 15px 0;
+            
+            &.views-row-odd
+            {
+                background:none;
+            }
+            
+            .views-field-field-property-image
+            {
+                position: static;
+                padding: 0 20px;
+            }
+        }
+    }
+    .btn-properties
+    {
+        display: none!important;
+    }
+    body.page-properties,
+    body.page-special-event-rentals
+    {
+        #content
+        {
+            width: auto;
+            height: auto;
+            float: none;
+        }
+    }
+}
+
+
+
+
+
+
+@media screen and (max-width:1000px)
+{
+    #navigation
+    {
+        & > div > div
+        {
+            padding: 0;
+        }
+        
+        #logo
+        {
+            padding-left: 6px;
+            padding-right: 6px;
+        }
+        
+        #block-system-main-menu .content>ul>li>a
+        {
+            padding-left:6px;
+            padding-right: 6px;
+        }
+    }
+}
+
+
+
+
+
+
+@media screen and (max-width:960px)
+{
+    .view-home-news,
+    .view-home-events,
+    .view-home-properties,
+    .view-home-eat-play
+    {
+        background:$blue;
+        border-left: 1px solid $gold;
+        margin-left: -1px;
+        height: 450px;
+        
+        .views-row
+        {
+            width: 100%;
+            height: 150px;
+            background:$blue;
+            
+            & > div
+            {
+                height: auto;
+            }
+        }
+    }
+    .view-home-properties
+    {
+        .views-field-field-short-title
+        {
+            width: 100px;
+            float: left;
+        }
+        .views-field-field-property-image img
+        {
+            width: 50%;
+            float: left;
+            margin-left: 30px;
+        }
+    }
+    body.front #main-wrapper .region-content
+    {
+        height: 450px;
+    }
+}
+
+
+
+
+
+
+@media screen and (max-width:800px)
+{
+    #navigation
+    {
+        height: 100px;
+        
+        #logo
+        {
+            float: none;
+            border-right: 0;
+            
+            img
+            {
+                margin: 0 auto;
+            }
+        }
+        
+        #block-system-main-menu
+        {
+        }
+        
+        .region-navigation
+        {
+            width: 620px;
+            margin: 0 auto;
+        }
+    }
+    
+    #footer
+    {
+        & > div > div > div
+        {
+            padding-right: 0;
+        }
+        
+        #footer-logo
+        {
+            padding-right:0;
+            margin: 0 auto;
+            float: none;
+            display: block;
+            width: 140px;
+        }
+        
+        #site-by-cci
+        {
+            margin-left: 0;
+        }
+    }
+    
+    .view-property,
+    .view-special-rental
+    {
+        padding-left: 0;
+        
+        .view-content
+        {
+            padding-left: 0;
+        }
+        
+        .views-field-title,
+        .views-field-field-description,
+        .views-field-field-amenities
+        {
+            padding: 0 20px;
+        }
+        .views-field-title h1
+        {
+            background-position:left bottom;
+            background-size:initial;
+        }
+        .views-field-field-description,
+        .views-field-field-amenities
+        {
+            min-height:0!important;
+            display: block!important;
+            position: static;
+        }
+        .btn-switch-description
+        {
+            display: none;
+        }
+        .views-field-field-images-1
+        {
+            position: relative;
+            left: 0!important;
+            border-left: 0;
+        }
+        .views-field-field-images
+        {
+            position: relative;
+            top: 0!important;
+            left: 0!important;
+            border-left: 0;
+        }
+    }
+    body.node-type-property,
+    body.node-type-special-rental
+    {
+        #main-wrapper:after
+        {
+            margin-left: 0;
+            left: 0;
+        }
+    }
+    
+    #welcome
+    {
+        .block h2
+        {
+            float: none;
+            width: auto;
+            text-align: center;
+            line-height:normal;
+        }
+        .left,
+        .right
+        {
+            width: 45%;
+            padding: 0;
+        }
+        .left
+        {
+            margin-right: 5%;
+        }
+    }
+    
+    body.not-front #header
+    {
+        display: none;
+    }
+}
+
+
+
+
+
+
+@media screen and (max-width:720px)
+{
+    
+    body.front #main-wrapper
+    {
+        padding: 20px 0;
+        
+        .region-content
+        {
+            height: auto;
+            
+            &:after
+            {
+                display: none;
+            }
+            
+            .block-views .content
+            {
+                margin-left: 0;
+                
+                & > .view
+                {
+                    position: static;
+                    border-left: 0;
+                }
+            }
+        }
+    }
+    .view-home-news,
+    .view-home-events,
+    .view-home-properties,
+    .view-home-eat-play
+    {
+        opacity:1;
+        background:none;
+        overflow: hidden;
+        height: auto;
+        max-height: 0;
+        transition:max-height 0.4s;
+        
+        .views-row
+        {
+            height: auto;
+            border-left: 0;
+            margin-left: 0;
+            background:none!important;
+        }
+    }
+    .region-content.active-news .view-home-news,
+    .region-content.active-events .view-home-events,
+    .region-content.active-properties .view-home-properties,
+    .region-content.active-eat-play .view-home-eat-play
+    {
+        
+        max-height:600px;
+    }
+    .region-content.active-news #block-views-home-news-block,
+    .region-content.active-events #block-views-home-events-block,
+    .region-content.active-properties #block-views-home-properties-block,
+    .region-content.active-eat-play #block-views-home-eat-play-block
+    {
+        border:1px solid $gold;
+    }
+    .view-home-properties
+    {
+        .views-field-field-property-image img
+        {
+            width: 200px;
+            float: left;
+            margin-left: 30px;
+        }
+    }
+    
+    #block-block-6,
+    #block-block-7
+    {
+        width: auto;
+        float: none;
+        border-right: 0;
+        padding-right: 0;
+        border-bottom: 1px solid $gold;
+    }
+    .view-event,
+    .view-news-article
+    {
+        padding-left: 0;
+        
+        .view-content
+        {
+            padding-left: 0;
+            position: static;
+            border-left: 0;
+        }
+    }
+}
+
+
+
+
+
+@media screen and (max-width:640px)
+{
+    #block-block-11
+    {
+        display: block;
+        
+        #menu-btn
+        {
+            display: block;
+            width: 90px;
+            height: 50px;
+            font-size: 0;
+            color:transparent;
+            background:url(../img/hamburger.png) no-repeat center center;
+            border-left: 1px dotted $gold;
+            position: absolute;
+            top: 0;
+            right: 0;
+            z-index: 1;
+        }
+    }
+    
+    #navigation
+    {
+        height: 50px;
+        
+        #block-system-main-menu
+        {
+            display: none;
+            position: absolute;
+            top:50px;
+            right: 0;
+            width: 180px;
+            border:1px solid $gold;
+            border-right: 0;
+            background:$navy;
+            padding-bottom: 50px;
+            
+            .content>ul>li
+            {
+                float: none;
+                margin: 0 15px;
+                border-bottom: 1px dotted $gold;
+                
+                a
+                {
+                    border-right: 0;
+                    
+                    &:hover
+                    {
+                        padding-top:17px;
+                        border-top: 0;
+                    }
+                }
+            }
+        }
+        #search-block-form,
+        a.fb
+        {
+            display: none;
+            position: absolute;
+            top:338px;
+            border-left: 0;
+        }
+        #search-block-form
+        {
+            right:130px;
+        }
+        a.fb
+        {
+            right: 90px;
+        }
+    }
+    
+    #block-views-eat-play-block
+    {
+        display: none;
+    }
+    #gmap
+    {
+        position: static;
+    }
+    
+    body.page-contact #content
+    {
+        margin-left: 0;
+        padding-left: 0;
+        height: auto;
+    }
+    #gmap-contact
+    {
+        width: 100%;
+        height: 250px;
+        position: static;
+        padding: 0 20px;
+        margin-left: -20px;
+    }
+}
+
+
+
+
+
+@media screen and (max-width:540px)
+{
+    #navigation #logo img
+    {
+        margin:0 0 0 10px;
+    }
+    
+    #welcome
+    {
+        .left, .right
+        {
+            width: auto;
+            float: none;
+            margin: 0;
+            padding: 0;
+        }
+    }
+    
+    .view-properties,
+    .view-special-rental
+    {
+        .views-row
+        {
+            width: 100%;
+            float: none;
+            padding: 0 0 20px 0;
+            
+            .views-field-field-short-description a
+            {
+                height: auto;
+                padding-bottom: 10px;
+            }
+        }
+    }
+}
+
+
+
+
+
+@media screen and (min-width:641px)
+{
+    #block-system-main-menu,
+    #search-block-form,
+    #navigation a.fb
+    {
+        display: block!important;
+    }
+}
