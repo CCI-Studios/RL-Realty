@@ -122,6 +122,27 @@ a
             }
         }
     }
+    
+    a.fb
+    {
+        display: block;
+        height: 46px;
+        font-size: 0;
+        color:transparent;
+        width: 36px;
+        padding: 2px 0;
+        background:url(../img/fb-white.png) no-repeat center 13px;
+        border-left: 1px dotted $gold;
+        float: left;
+        
+        &:hover
+        {
+            background-color:$blue;
+            border-top: 2px solid $gold;
+            padding-top: 0;
+            background-position:center 11px;
+        }
+    }
 }
 
 #footer
@@ -200,11 +221,55 @@ a
         font-size: 1.1em;
     }
 
-    #footer-search
+    #block-block-9
     {
         position: absolute;
-        top: 0;
+        top: 25px;
         right: 0;
+        
+        a.fb
+        {
+            display: block;
+            width: 24px;
+            height: 24px;
+            font-size: 0;
+            color:transparent;
+            background:url(../img/fb.png) no-repeat center -48px;
+            
+            &:hover
+            {
+                background-position:center -24px;
+            }
+        }
+    }
+    #block-block-10
+    {
+        position: absolute;
+        top: 25px;
+        right: 40px;
+        
+        a.search-btn
+        {
+            display: block;
+            width: 24px;
+            height: 24px;
+            font-size: 0;
+            color:transparent;
+            background:url(../img/search-navy.png) no-repeat center center;
+            
+            &:after
+            {
+                content:"";
+                display: block;
+                position: absolute;
+                left: -99999px;
+            }
+            
+            &:hover, &:after
+            {
+                background-image:url(../img/search-gold.png);
+            }
+        }
     }
 
     #site-by-cci
@@ -623,4 +688,67 @@ body.page-contact
     left: 0;
     width: 50%;
     top: 0;
+}
+
+#block-block-8 p
+{
+    margin: 0;
+}
+#search-block-form
+{
+    float: left;
+    position: relative;
+    
+    &:before
+    {
+        content:"";
+        display: block;
+        width: 36px;
+        height: 46px;
+        line-height: 46px;
+        font-size: 0;
+        padding: 2px 0;
+        color:transparent;
+        cursor: pointer;
+        border: 0;
+        background:url(../img/search-white.png) no-repeat center 13px;
+        float: left;
+    }
+    &:hover:before
+    {
+        background-color:$blue;
+        border-top: 2px solid $gold;
+        padding-top: 0;
+        background-position:center 11px;
+    }
+    
+    & > div
+    {
+        display: none;
+        position: absolute;
+        top: 50px;
+        right: -1px;
+        height: 30px;
+        width: 200px;
+        padding: 5px;
+        background:$gold;
+        
+        input.form-text
+        {
+            display: block;
+            border:0;
+            width: 190px;
+            height: 30px;
+            line-height: 30px;
+            padding: 0 5px;
+            font-size: 18px;
+            color:$navy;
+        }
+        
+        input.form-submit
+        {
+            position: absolute;
+            left: -99999px;
+        }
+    }
 }

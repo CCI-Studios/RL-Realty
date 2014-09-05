@@ -1,6 +1,7 @@
 (function($) {
     $(function(){
-        setup();
+        if ($("body").hasClass("front"))
+            setup();
     });
     
     function setup()

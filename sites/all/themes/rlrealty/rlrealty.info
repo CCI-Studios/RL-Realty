@@ -10,6 +10,7 @@ scripts[] = js/properties.js
 scripts[] = js/property.js
 scripts[] = js/property-description.js
 scripts[] = js/contact-map.js
+scripts[] = js/search.js
 
 stylesheets[all][] = css/screen.css
 
