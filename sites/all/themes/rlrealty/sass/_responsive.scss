@@ -261,6 +261,45 @@
     {
         display: none;
     }
+    
+    .btn-team-members
+    {
+        display: none!important;
+    }
+    .view-team-members
+    {
+        .view-content
+        {
+            width: auto;
+            position: static;
+        }
+        
+        .views-row
+        {
+            float: none;
+            width: 100%;
+            max-width:640px;
+            margin: 0 auto;
+            padding-bottom: 20px;
+            
+            .views-field-field-image img
+            {
+                border-right: 0;
+                margin:0 auto
+            }
+            .views-field-nothing
+            {
+                position: static;
+                opacity:1;
+                background:none;
+                
+                .views-field-title
+                {
+                    text-align: center;
+                }
+            }
+        }
+    }
 }
 
 
