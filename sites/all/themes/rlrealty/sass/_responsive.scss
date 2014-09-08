@@ -468,12 +468,19 @@
         {
             display: none;
             position: absolute;
-            top:338px;
+            top:322px;
             border-left: 0;
         }
         #search-block-form
         {
             right:130px;
+            
+            & > div
+            {
+                right:auto;
+                left: 50%;
+                margin-left: -105px;
+            }
         }
         a.fb
         {
