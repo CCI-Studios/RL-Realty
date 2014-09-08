@@ -2,6 +2,11 @@ body.front
 {
     #main-wrapper
     {
+        &:after
+        {
+            background-image:url(../img/bg-irish-fighter-home.png);
+        }
+        
         h1#page-title
         {
             display: none;
