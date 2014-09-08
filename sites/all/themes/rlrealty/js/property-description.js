@@ -15,10 +15,6 @@
         $btnAmenities.click(viewDescription);
         amenities().append($btnAmenities);
         
-        var minHeight = description().outerHeight();
-        if (amenities().outerHeight() > minHeight) minHeight = amenities().outerHeight();
-        description().add(amenities()).css("min-height", minHeight+"px");
-        
         amenities().hide();
     }
     function container()
