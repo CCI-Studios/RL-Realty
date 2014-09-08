@@ -32,7 +32,7 @@
 
     function toggleSlideBody()
     {
-        $(this).find(".views-field-body").slideToggle();
+        $(this).find(".views-field-body").stop(true, false).slideToggle();
     }
 
     function container()
