@@ -699,6 +699,7 @@ body.page-contact
 {
     float: left;
     position: relative;
+    cursor: pointer;
     
     &:before
     {
@@ -733,6 +734,7 @@ body.page-contact
         width: 200px;
         padding: 5px;
         background:$gold;
+        cursor: default;
         
         input.form-text
         {
