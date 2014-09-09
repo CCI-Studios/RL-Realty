@@ -7,8 +7,8 @@
     var paused = false;
 
     $(function(){
-        setup();
-        start();
+        if (container1().length > 0)
+            setup();
     });
 
     function setup()
@@ -24,6 +24,7 @@
         container1().add(container2()).on("mouseenter", pause);
         container1().add(container2()).on("mouseleave", unpause);
         $(window).resize(layout);
+        start();
     }
     function createArrows()
     {
@@ -79,6 +80,8 @@
         var height = width*0.527777;
         container1().height(height);
         container2().css("top", height+"px");
+        
+        $("#main-wrapper").css("min-height", height + container2().height() + "px");
 
         thumbnails().each(function(){
             $(this).width(Math.ceil(width/numPerPage()));
