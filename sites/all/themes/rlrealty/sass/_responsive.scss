@@ -153,7 +153,7 @@
         
         .region-navigation
         {
-            width: 620px;
+            width: 570px;
             margin: 0 auto;
         }
     }
@@ -361,7 +361,7 @@
     .region-content.active-eat-play .view-home-eat-play
     {
         
-        max-height:600px;
+        max-height:750px;
     }
     .region-content.active-news #block-views-home-news-block,
     .region-content.active-events #block-views-home-events-block,
@@ -605,6 +605,21 @@
             display: inline-block;
             margin: 5px 5px 10px 5px;
             vertical-align: middle;
+        }
+    }
+    
+    .view-home-properties
+    {
+        .views-field-field-short-title
+        {
+            width: auto;
+            float: none;
+            padding-left: 30px;
+            margin-bottom: 5px;
+        }
+        .views-row:hover > div
+        {
+            background:none;
         }
     }
 }
