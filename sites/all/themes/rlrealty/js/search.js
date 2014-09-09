@@ -6,12 +6,16 @@
     
     function setup()
     {
-        $("#search-block-form").click(searchButtonClick).find("input.form-text").click(preventBubble);
+        $("#search-block-form")
+        .click(toggleSearchBox)
+        .find("input.form-text")
+        .click(preventBubble)
+        .on("blur", toggleSearchBox);
     }
     
-    function searchButtonClick()
+    function toggleSearchBox()
     {
-        var $container = $(this).find("> div");
+        var $container = $("#search-block-form > div");
         if ($container.css("display") == "none")
         {
             $container.slideDown().find("input.form-text").focus();
