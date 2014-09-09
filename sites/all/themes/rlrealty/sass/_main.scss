@@ -286,7 +286,6 @@ a
     padding:15px 0 0 0;
     overflow: hidden;
     border-top:2px solid white;
-    border-bottom:2px solid white;
     position: relative;
     z-index: 1;
 
@@ -349,6 +348,7 @@ a
 {
     color:white;
     overflow: hidden;
+    border-top: 2px solid white;
 
     background:$navy;
     background: -moz-linear-gradient(top, #072c68 0%, #041c42 100%); /* FF3.6+ */
@@ -510,6 +510,7 @@ body.page-about
     height: 300px;
     width: 100%;
     text-shadow:-2px 2px 2px rgba(4,28,66, 0.25);
+    border-top: 2px solid $gold;
     
     & > div
     {
@@ -548,7 +549,7 @@ body.page-about
     height: 300px;    
     width: 100%;
     position: absolute;
-    top: 0;
+    top: 2px;
     
     a
     {
