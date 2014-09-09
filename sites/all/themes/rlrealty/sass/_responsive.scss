@@ -595,6 +595,18 @@
             }
         }
     }
+    
+    #footer
+    {
+        #block-block-9,
+        #block-block-10
+        {
+            position: static;
+            display: inline-block;
+            margin: 5px 5px 10px 5px;
+            vertical-align: middle;
+        }
+    }
 }
 
 
