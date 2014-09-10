@@ -23,7 +23,7 @@
         hideArrows();
         container1().add(container2()).on("mouseenter", pause);
         container1().add(container2()).on("mouseleave", unpause);
-        $(window).resize(layout);
+        $(window).resize(layout).load(layout);
         start();
     }
     function createArrows()
