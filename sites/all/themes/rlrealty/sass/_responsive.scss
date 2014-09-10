@@ -496,11 +496,14 @@
     
     #block-views-eat-play-block
     {
-        display: none;
-    }
-    #gmap
-    {
-        position: static;
+        & > div > div
+        {
+            bottom: auto;
+        }
+        .content
+        {
+            display: none;
+        }
     }
     
     body.page-contact #content
