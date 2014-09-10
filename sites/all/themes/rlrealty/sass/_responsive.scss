@@ -300,6 +300,17 @@
             }
         }
     }
+    
+    .view-header-slideshow
+    {
+        .views-row
+        {
+            .views-field-body
+            {
+                display: block!important;
+            }
+        }
+    }
 }
 
 
@@ -528,11 +539,6 @@
                 {
                     padding: 6px 15px;
                 }
-            }
-            
-            .views-field-body
-            {
-                display: block;
             }
         }
         
