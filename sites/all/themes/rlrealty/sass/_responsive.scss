@@ -257,11 +257,6 @@
         }
     }
     
-    body.not-front #header
-    {
-        display: none;
-    }
-    
     .btn-team-members
     {
         display: none!important;
@@ -560,6 +555,11 @@
                 display: inline-block;
             }
         }
+    }
+    
+    body.not-front #header
+    {
+        display: none;
     }
 }
 
