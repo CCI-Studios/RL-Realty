@@ -450,6 +450,7 @@
             border-right: 0;
             background:$navy;
             padding-bottom: 50px;
+            z-index: 1000;
             
             .content>ul>li
             {
@@ -474,8 +475,9 @@
         {
             display: none;
             position: absolute;
-            top:322px;
+            top:373px;
             border-left: 0;
+            z-index: 1001;
         }
         #search-block-form
         {
