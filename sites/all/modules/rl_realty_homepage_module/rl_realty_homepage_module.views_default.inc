@@ -71,6 +71,14 @@ function rl_realty_homepage_module_views_default_views() {
   $handler->display->display_options['fields']['field_website']['alter']['alter_text'] = TRUE;
   $handler->display->display_options['fields']['field_website']['alter']['text'] = '<a href="[field_website]" target="_blank">Website</a>';
   $handler->display->display_options['fields']['field_website']['element_label_colon'] = FALSE;
+  /* Field: Content: Short Description */
+  $handler->display->display_options['fields']['field_short_description']['id'] = 'field_short_description';
+  $handler->display->display_options['fields']['field_short_description']['table'] = 'field_data_field_short_description';
+  $handler->display->display_options['fields']['field_short_description']['field'] = 'field_short_description';
+  $handler->display->display_options['fields']['field_short_description']['label'] = '';
+  $handler->display->display_options['fields']['field_short_description']['alter']['max_length'] = '100';
+  $handler->display->display_options['fields']['field_short_description']['alter']['trim'] = TRUE;
+  $handler->display->display_options['fields']['field_short_description']['element_label_colon'] = FALSE;
   /* Sort criterion: Content: Post date */
   $handler->display->display_options['sorts']['created']['id'] = 'created';
   $handler->display->display_options['sorts']['created']['table'] = 'node';

@@ -127,6 +127,46 @@ function rl_realty_eat_play_field_default_field_instances() {
     ),
   );
 
+  // Exported field_instance: 'node-eat_play-field_short_description'
+  $field_instances['node-eat_play-field_short_description'] = array(
+    'bundle' => 'eat_play',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'module' => 'text',
+        'settings' => array(),
+        'type' => 'text_default',
+        'weight' => 6,
+      ),
+      'teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'node',
+    'field_name' => 'field_short_description',
+    'label' => 'Short Description',
+    'required' => 0,
+    'settings' => array(
+      'text_processing' => 0,
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'text',
+      'settings' => array(
+        'rows' => 5,
+      ),
+      'type' => 'text_textarea',
+      'weight' => 38,
+    ),
+  );
+
   // Exported field_instance: 'node-eat_play-field_website'
   $field_instances['node-eat_play-field_website'] = array(
     'bundle' => 'eat_play',
@@ -172,6 +212,7 @@ function rl_realty_eat_play_field_default_field_instances() {
   t('Address');
   t('Business Type');
   t('Phone');
+  t('Short Description');
   t('Website');
 
   return $field_instances;
