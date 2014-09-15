@@ -679,16 +679,14 @@
         position: relative;
         left: -1px;
         
-        .views-field-field-event-date,
-        .views-field-created
+        .views-field-field-event-date
         {
             font-weight: 400;
             text-transform: uppercase;
             width: 70px;
             text-align: center;
         }
-        .views-field-field-event-date-1,
-        .views-field-created-1
+        .views-field-field-event-date-1
         {
             font-size: 45px;
             text-shadow:-2px 2px 2px rgba(0,0,0, 0.3);
@@ -772,13 +770,11 @@
 .view-home-news,
 .view-home-events
 {
-    .views-field-created,
     .views-field-field-event-date
     {
         font-weight: 400;
         text-transform: uppercase;
     }
-    .views-field-created-1,
     .views-field-field-event-date-1
     {
         font-size: 45px;
@@ -809,6 +805,25 @@
         .views-field-title
         {
             color: $gold;
+        }
+    }
+}
+.view-home-news
+{
+    .views-field-body
+    {
+        padding-bottom: 50px;
+    }
+    .views-row:hover
+    {
+        & > div
+        {
+            background:none;
+        }
+        
+        .views-field-body
+        {
+            background:url(../img/bg-home-module-hover.png) no-repeat bottom right;
         }
     }
 }
