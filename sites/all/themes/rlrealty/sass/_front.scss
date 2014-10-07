@@ -21,16 +21,58 @@ body.front
         {
             display:table-cell;
             width: 25%;
+            position: relative;
+            text-shadow:-2px 2px 2px rgba(0,0,0, 0.3);
+            
+            &:hover
+            {
+                background-image:url(../img/icon-white-small-irish-fighter.png);
+                background-repeat:no-repeat;
+                background-position:8px bottom;
+                
+                & > div > div > h2
+                {
+                    color:$gold;
+                }
+            }
+            &:hover:after
+            {
+                content:"";
+                display: block;
+                position: absolute;
+                left: 0;
+                top: 0;
+                right: 0;
+                bottom: 0;
+                border-style:solid;
+                border-color:$gold;
+                border-width:0 2px;
+                z-index: 0;
+            }
             
             & > div
             {
                 padding: 10px;
+                
+                & > div > h2
+                {
+                    @extend .font-condensed;
+                    text-transform: uppercase;
+                }
+            }
+            
+            .content
+            {
+                font-size: 0.9em;
+                position: relative;
+                z-index: 1;
+                padding-bottom: 40px;
             }
         }
         #block-block-12,
         #block-block-14
         {
-            background:$blue;
+            background-color:$blue;
         }
     }
 }
