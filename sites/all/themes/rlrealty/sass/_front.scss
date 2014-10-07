@@ -1,99 +1,36 @@
 body.front
 {
-    #main-wrapper
+    h1#page-title
     {
-        &:after
-        {
-            background-image:url(../img/bg-irish-fighter-home.png);
-        }
-        
-        h1#page-title
-        {
-            display: none;
-        }
-        
+        display: none;
+    }
+    
+    #main-wrapper:after
+    {
+        display: none;
+    }
+    
+    #content
+    {
         .region-content
         {
-            position: relative;
-            height: 240px;
+            display: table;
+            width: 100%;
+        }
+        .block
+        {
+            display:table-cell;
+            width: 25%;
             
-            .block-views
+            & > div
             {
-                @extend .font-condensed;
-                
-                & > div > div > h2
-                {
-                    @extend .font-condensed;
-                    font-size: 45px;
-                    color:white;
-                    text-shadow:-2px 2px 2px rgba(0,0,0, 0.3);
-                    height: 45px;
-                    line-height: 45px;
-                    padding-left: 30px;
-                    margin-top:12px;
-                    width: 260px;
-                    text-transform: uppercase;
-                    float: left;
-                    clear: left;
-                    cursor: pointer;
-                    position: relative;
-                    z-index: 2;
-                    transition:color 0.4s;
-                }
-                
-                .content
-                {
-                    margin-left: 290px;
-                    position: relative;
-                    
-                    & > .view
-                    {
-                        position: absolute;
-                        top: 0;
-                        left: 0;
-                        width: 100%;
-                    }
-                }
+                padding: 10px;
             }
-            &.active-news #block-views-home-news-block,
-            &.active-events #block-views-home-events-block,
-            &.active-properties #block-views-home-properties-block,
-            &.active-eat-play #block-views-home-eat-play-block
-            {
-                & > div > div > h2
-                {
-                    color:$gold;
-                }
-            }
-            
-            &:after
-            {
-                content:"";
-                display: block;
-                position: absolute;
-                left: 0;
-                top:10px;
-                width: 289px;
-                height: 43px;
-                background:$blue;
-                border:1px solid $gold;
-                border-right: 0;
-                z-index: 1;
-                transition:top 0.4s;
-            }
-            &.active-events:after
-            {
-                top: 68px;
-            }
-            &.active-properties:after
-            {
-                top:125px
-            }
-            &.active-eat-play:after
-            {
-                top: 182px;
-            }
-            
+        }
+        #block-block-12,
+        #block-block-14
+        {
+            background:$blue;
         }
     }
 }

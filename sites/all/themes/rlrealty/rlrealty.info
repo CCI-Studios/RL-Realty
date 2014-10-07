@@ -3,7 +3,6 @@ description = RL Realty Custom
 core = 7.x
 
 scripts[] = js/slideshow.js
-scripts[] = js/home-module.js
 scripts[] = js/menu-btn.js
 scripts[] = js/maps.js
 scripts[] = js/team-members.js

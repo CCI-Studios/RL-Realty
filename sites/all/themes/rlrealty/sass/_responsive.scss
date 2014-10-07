@@ -81,54 +81,6 @@
 
 
 
-@media screen and (max-width:960px)
-{
-    .view-home-news,
-    .view-home-events,
-    .view-home-properties,
-    .view-home-eat-play
-    {
-        background:$blue;
-        border-left: 1px solid $gold;
-        margin-left: -1px;
-        height: 450px;
-        
-        .views-row
-        {
-            width: 100%;
-            height: 150px;
-            background:$blue;
-            
-            & > div
-            {
-                height: auto;
-            }
-        }
-    }
-    .view-home-properties
-    {
-        .views-field-field-short-title
-        {
-            width: 100px;
-            float: left;
-        }
-        .views-field-field-property-image img
-        {
-            width: 50%;
-            float: left;
-            margin-left: 30px;
-        }
-    }
-    body.front #main-wrapper .region-content
-    {
-        height: 450px;
-    }
-}
-
-
-
-
-
 
 @media screen and (max-width:800px)
 {
@@ -309,6 +261,25 @@
             }
         }
     }
+    
+    body.front #content
+    {
+        .region-content
+        {
+            display: block;
+        }
+        .block
+        {
+            display: block;
+            width: 50%;
+            float: left;
+            background:none!important;
+        }
+        #block-block-14
+        {
+            clear: left;
+        }
+    }
 }
 
 
@@ -344,50 +315,6 @@
             }
         }
     }
-    .view-home-news,
-    .view-home-events,
-    .view-home-properties,
-    .view-home-eat-play
-    {
-        opacity:1;
-        background:none;
-        overflow: hidden;
-        height: auto;
-        max-height: 0;
-        transition:max-height 0.4s;
-        
-        .views-row
-        {
-            height: auto;
-            border-left: 0;
-            margin-left: 0;
-            background:none!important;
-        }
-    }
-    .region-content.active-news .view-home-news,
-    .region-content.active-events .view-home-events,
-    .region-content.active-properties .view-home-properties,
-    .region-content.active-eat-play .view-home-eat-play
-    {
-        
-        max-height:750px;
-    }
-    .region-content.active-news #block-views-home-news-block,
-    .region-content.active-events #block-views-home-events-block,
-    .region-content.active-properties #block-views-home-properties-block,
-    .region-content.active-eat-play #block-views-home-eat-play-block
-    {
-        border:1px solid $gold;
-    }
-    .view-home-properties
-    {
-        .views-field-field-property-image img
-        {
-            width: 200px;
-            float: left;
-            margin-left: 30px;
-        }
-    }
     
     #block-block-6,
     #block-block-7
@@ -397,18 +324,6 @@
         border-right: 0;
         padding-right: 0;
         border-bottom: 1px solid $gold;
-    }
-    .view-event,
-    .view-news-article
-    {
-        padding-left: 0;
-        
-        .view-content
-        {
-            padding-left: 0;
-            position: static;
-            border-left: 0;
-        }
     }
 }
 
@@ -569,6 +484,18 @@
     {
         display: none;
     }
+    
+    body.front #content .block
+    {
+        width: 100%;
+        float: none;
+        
+        & > div
+        {
+            padding-left:0;
+            padding-right: 0;
+        }
+    }
 }
 
 
@@ -619,21 +546,6 @@
             display: inline-block;
             margin: 5px 5px 10px 5px;
             vertical-align: middle;
-        }
-    }
-    
-    .view-home-properties
-    {
-        .views-field-field-short-title
-        {
-            width: auto;
-            float: none;
-            padding-left: 30px;
-            margin-bottom: 5px;
-        }
-        .views-row:hover > div
-        {
-            background:none;
         }
     }
 }
