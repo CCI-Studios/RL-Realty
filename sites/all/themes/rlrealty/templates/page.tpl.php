@@ -77,7 +77,7 @@
 
     <div id="navigation"><div><div>
         <a href="<?php print $front_page; ?>" title="<?php print t('Home'); ?>" rel="home" id="logo">
-          <img src="/sites/all/themes/rlrealty/img/rl-logo.png" alt="R&amp;L Realty" />
+          <img src="/sites/all/themes/rlrealty/img/rl-logo.png" alt="RL Realty" />
         </a>
 
       <?php print render($page['navigation']); ?>
