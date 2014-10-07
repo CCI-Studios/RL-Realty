@@ -162,9 +162,12 @@
     {
         & > div > div > div
         {
-            padding-right: 0;
+            padding: 0;
         }
-        
+        #block-block-2
+        {
+            position: relative;
+        }
         #footer-logo
         {
             padding-right:0;
