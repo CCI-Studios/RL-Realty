@@ -30,18 +30,7 @@
             background:rgba(4,28,66, 0.8);
             padding: 6px 15px;
             width: 450px;
-            z-index: 1;
-            
-            a.field_link
-            {
-                display: block;
-                position: absolute;
-                left: 0;
-                top: 0;
-                width: 100%;
-                height: 100%;
-                text-decoration: none;
-            }
+            z-index: 2;
         }
 
         .views-field-title h2
@@ -54,6 +43,18 @@
         .views-field-body
         {
             display: none;
+        }
+        
+        a.field_link
+        {
+            display: block;
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            text-decoration: none;
+            z-index: 3;
         }
 
         .views-field-field-header-image
@@ -87,7 +88,7 @@
         background-position:top left;
         font-size: 0;
         color:transparent;
-        z-index: 3;
+        z-index: 2;
         
         &:hover
         {

@@ -8,7 +8,7 @@
 
     function setup()
     {
-        container().find(".views-field-nothing").on("mouseenter mouseleave", toggleSlideBody);
+        container().find(".views-row").on("mouseenter mouseleave", toggleSlideBody);
         container().on("mouseenter", pause).on("mouseleave", unpause);
         rows().first().addClass("active").show();
         
