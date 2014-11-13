@@ -7,13 +7,15 @@
     {
         description().addClass("active");
         
-        var $btnDescription = $("<a href='#' class='btn-switch-description'>View Amenities</a>");
-        $btnDescription.click(viewAmenities);
-        description().append($btnDescription);
+        $("<a href='#' class='btn-switch-description'>View Amenities</a>")
+        .click(viewAmenities)
+        .appendTo(description());
         
-        var $btnAmenities = $("<a href='#' class='btn-switch-description'>View Description</a>");
-        $btnAmenities.click(viewDescription);
-        amenities().append($btnAmenities);
+        $("<a href='#' class='btn-switch-description'>View Description</a>")
+        .click(viewDescription)
+        .appendTo(amenities());
+        
+        description().add(amenities()).append("<a href='/contact' class='btn-visit'>Visit or rent this property</a>");
         
         amenities().hide();
     }
