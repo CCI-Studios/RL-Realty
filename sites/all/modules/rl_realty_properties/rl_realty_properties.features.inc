@@ -111,7 +111,7 @@ function rl_realty_properties_node_info() {
       'help' => '',
     ),
     'special_rental' => array(
-      'name' => t('Special Rental'),
+      'name' => t('Short-Term Rental'),
       'base' => 'node_content',
       'description' => '',
       'has_title' => '1',
