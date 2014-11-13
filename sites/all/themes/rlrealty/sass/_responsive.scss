@@ -419,14 +419,23 @@
     
     #block-views-eat-play-block
     {
+        height: auto;
+        
         & > div > div
         {
-            bottom: auto;
+            position: static;
+            width: auto;
+            background:$navy;
         }
         .content
         {
             display: none;
         }
+    }
+    #gmap
+    {
+        position: static;
+        top:0;
     }
     
     body.page-contact #content
