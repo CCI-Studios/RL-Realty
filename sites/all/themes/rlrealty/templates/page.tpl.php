@@ -81,6 +81,7 @@
         </a>
 
       <?php print render($page['navigation']); ?>
+      <?php print render($page['navigation2']); ?>
     </div></div></div>
 
     <div id="header"><div><div>

@@ -99,10 +99,6 @@
             }
         }
         
-        #block-system-main-menu
-        {
-        }
-        
         .region-navigation
         {
             width: 575px;
@@ -367,7 +363,7 @@
     {
         height: 50px;
         
-        #block-system-main-menu
+        .region-navigation
         {
             display: none;
             position: absolute;
@@ -377,8 +373,12 @@
             border:1px solid $gold;
             border-right: 0;
             background:$navy;
-            padding-bottom: 50px;
             z-index: 1000;
+        }
+        
+        #block-system-main-menu
+        {
+            display: block;
             
             .content>ul>li
             {
@@ -401,15 +401,12 @@
         #search-block-form,
         a.fb
         {
-            display: none;
-            position: absolute;
-            top:373px;
+            
             border-left: 0;
-            z-index: 1001;
         }
         #search-block-form
         {
-            right:130px;
+            margin-left:15px;
             
             & > div
             {
@@ -417,10 +414,6 @@
                 left: 50%;
                 margin-left: -105px;
             }
-        }
-        a.fb
-        {
-            right: 90px;
         }
     }
     

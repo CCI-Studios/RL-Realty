@@ -15,6 +15,7 @@ scripts[] = js/search.js
 stylesheets[all][] = css/screen.css
 
 regions[navigation] = Navigation
+regions[navigation2] = Navigation 2
 regions[header] = Header
 regions[welcome] = Welcome
 regions[help] = Help
