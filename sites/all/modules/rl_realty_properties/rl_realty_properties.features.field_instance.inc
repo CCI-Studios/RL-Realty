@@ -130,7 +130,7 @@ function rl_realty_properties_field_default_field_instances() {
     ),
     'widget' => array(
       'active' => 1,
-      'module' => 'image',
+      'module' => 'multiupload_imagefield_widget',
       'settings' => array(
         'manualcrop_crop_info' => 0,
         'manualcrop_default_crop_area' => 1,
@@ -153,7 +153,7 @@ function rl_realty_properties_field_default_field_instances() {
         'preview_image_style' => 'thumbnail',
         'progress_indicator' => 'throbber',
       ),
-      'type' => 'image_image',
+      'type' => 'image_miw',
       'weight' => 7,
     ),
   );
@@ -424,7 +424,7 @@ function rl_realty_properties_field_default_field_instances() {
     ),
     'widget' => array(
       'active' => 1,
-      'module' => 'image',
+      'module' => 'multiupload_imagefield_widget',
       'settings' => array(
         'manualcrop_crop_info' => 0,
         'manualcrop_default_crop_area' => 1,
@@ -447,7 +447,7 @@ function rl_realty_properties_field_default_field_instances() {
         'preview_image_style' => 'thumbnail',
         'progress_indicator' => 'throbber',
       ),
-      'type' => 'image_image',
+      'type' => 'image_miw',
       'weight' => 7,
     ),
   );
