@@ -11,23 +11,20 @@
         container().find(".views-field-nothing").on("mouseenter mouseleave", toggleSlideBody);
         container().on("mouseenter", pause).on("mouseleave", unpause);
         rows().first().addClass("active").show();
+        
+        createArrows();
 
-        createIndicators();
-
-        timer = setInterval(nextSlide, 5000);
+        timer = setInterval(nextInterval, 5000);
     }
-    function createIndicators()
+    function createArrows()
     {
-        var $ul = $("<ul id='indicators' />");
-        rows().each(function(i){
-            var $li = $("<li><a href='#'>Go to slide "+i+"</a></li>");
-            $li.click(function(){
-                indicatorClick(i);
-            });
-            if (i == 0) $li.addClass("active");
-            $ul.append($li);
-        });
-        container().append($ul);
+        $("<a class='btn-previous' href='#'>Previous</a>")
+        .click(clickPrevious)
+        .prependTo(container());
+        
+        $("<a class='btn-next' href='#'>Next</a>")
+        .click(clickNext)
+        .appendTo(container());
     }
 
     function toggleSlideBody()
@@ -63,7 +60,7 @@
             
         currentRow().css("z-index", "2").removeClass("active").fadeOut(600);
 
-        rows().eq(i).css({
+        rows().eq(i).stop(true,true).css({
             "z-index":"1",
             "display":"block",
             "opacity":"1"
@@ -75,10 +72,11 @@
 
     function nextSlide()
     {
-        if (!paused)
-        {
-            gotoSlide(nextIndex());
-        }
+        gotoSlide(nextIndex());
+    }
+    function previousSlide()
+    {
+        gotoSlide(previousIndex());
     }
     function nextIndex()
     {
@@ -90,6 +88,16 @@
         }
         return i;
     }
+    function previousIndex()
+    {
+        var i = currentRow().index();
+        i--;
+        if (i < minIndex())
+        {
+            i = maxIndex();
+        }
+        return i;
+    }
     function maxIndex()
     {
         return rows().length -1;
@@ -97,6 +105,14 @@
     function minIndex()
     {
         return 0;
+    }
+    
+    function nextInterval()
+    {
+        if (!paused)
+        {
+            nextSlide();
+        }
     }
 
     function stop()
@@ -110,5 +126,18 @@
     function unpause()
     {
         paused = false;
+    }
+    
+    function clickPrevious()
+    {
+        stop();
+        previousSlide();
+        return false;
+    }
+    function clickNext()
+    {
+        stop();
+        nextSlide();
+        return false;
     }
 }(jQuery));
