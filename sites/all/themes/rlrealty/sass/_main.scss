@@ -753,3 +753,34 @@ body.page-contact
 {
     display: none;
 }
+
+#block-block-16 .content
+{
+    text-align: center;
+    font-size: 0;
+    
+    p
+    {
+        margin: 0;
+    }
+    
+    img
+    {
+        max-width: 100%;
+    }
+}
+body.page-properties,
+body.node-type-property,
+body.page-short-term-rentals,
+body.node-type-special-rental
+{
+    #header > div
+    {
+        max-width: none;
+        
+        & > div
+        {
+            padding: 0;
+        }
+    }
+}
