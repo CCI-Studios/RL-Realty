@@ -58,12 +58,17 @@
     {
         if (i == currentRow().index()) return;
             
-        currentRow().css("z-index", "2").removeClass("active").fadeOut(600);
+        currentRow()
+        .css({
+            "z-index": "2",
+            "position":"absolute"
+        }).removeClass("active").fadeOut(600);
 
         rows().eq(i).stop(true,true).css({
             "z-index":"1",
             "display":"block",
-            "opacity":"1"
+            "opacity":"1",
+            "position":"relative"
         }).addClass("active");
 
         var $indicators = indicators();
