@@ -254,6 +254,7 @@
             .views-field-body
             {
                 display: block!important;
+                height: auto !important;
             }
         }
     }
@@ -562,6 +563,18 @@
             margin: 5px 5px 10px 5px;
             vertical-align: middle;
         }
+    }
+}
+
+
+
+
+@media screen and (width:1024px) and (orientation:landscape)
+{
+    .view-header-slideshow .views-row .views-field-body
+    {
+        display: block !important;
+        height: auto !important;
     }
 }
 
