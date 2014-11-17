@@ -85,7 +85,7 @@
             content += "</p>";
             infowindow = new google.maps.InfoWindow({
                 "content": content,
-                "maxWidth": "250px"
+                "maxWidth": 250
             });
             marker.anchorPoint = new google.maps.Point(0, -59);
             infowindow.open(map, marker);
