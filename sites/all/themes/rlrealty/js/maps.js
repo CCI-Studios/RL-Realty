@@ -70,7 +70,7 @@
         {
             if (infowindow)
                 infowindow.close();
-            var content = "<h3>"+args.title+"</h3>";
+            var content = "<div style='height:75px;'><h3>"+args.title+"</h3>";
             content += "<p>"+args.address;
             if (args.phone || args.website)
             {
@@ -82,7 +82,7 @@
                 if (args.website)
                     content += "<a href='"+args.website+"' target='_blank'>Website</a>";
             }
-            content += "</p>";
+            content += "</p></div>";
             infowindow = new google.maps.InfoWindow({
                 "content": content,
                 "maxWidth": 250
